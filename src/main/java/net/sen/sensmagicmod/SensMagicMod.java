@@ -1,6 +1,8 @@
 package net.sen.sensmagicmod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -12,6 +14,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.sen.sensmagicmod.item.ModCreativeModeTabs;
+import net.sen.sensmagicmod.item.ModItems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -26,6 +30,9 @@ public class SensMagicMod
     public SensMagicMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        //Register Custom Items
+        ModItems.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -46,7 +53,11 @@ public class SensMagicMod
 
     private void addCreative(CreativeModeTabEvent.BuildContents event)
     {
-
+        if (event.getTab() == ModCreativeModeTabs.SENS_MAGIC_TAB)
+        {
+            event.accept(ModItems.CRYSTAL_ENDER);
+            event.accept(ModItems.CRYSTAL_RAW);
+        }
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
