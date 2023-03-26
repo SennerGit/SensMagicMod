@@ -1,5 +1,15 @@
 {
+  "creativemodetab.sens_magic_tab" : "Sen's Magic Tab",
+
   "item.sensmagicmod.crystal_ender" : "Ender Magic Crystal",
   "item.sensmagicmod.crystal_raw" : "Raw Magic Crystal",
-  "creativemodetab.sens_magic_tab" : "Sen's Magic Tab"
+  "item.sensmagicmod.crimson_steel_raw" : "Crimson Steel Raw",
+  "item.sensmagicmod.crimson_steel_ingot" : "Crimson Steel Ingot",
+  "item.sensmagicmod.crimson_steel_nugget" : "Crimson Steel Nugget",
+
+  "block.sensmagicmod.block_crystal_ender" : "Ender Crytsal Block",
+  "block.sensmagicmod.crimson_steel_ore" : "Crimson Steel Ore",
+  "block.sensmagicmod.crimson_steel_deepslate_ore" : "Deepslate Crimson Steel Ore",
+  "block.sensmagicmod.crimson_steel_block" : "Crimson Steel Block",
+  "block.sensmagicmod.raw_crimson_steel_block" : "Raw Crimson Steel Block"
 }

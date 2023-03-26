@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "sensmagicmod:crimson_steel_ingot"
+    }
+  ],
+  "result": {
+    "item": "sensmagicmod:crimson_steel_nugget",
+    "count": 9
+  }
+}

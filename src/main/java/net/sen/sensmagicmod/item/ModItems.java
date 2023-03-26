@@ -11,10 +11,19 @@ public class ModItems
 {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SensMagicMod.MODID);
 
+    //Magic Crystal
     public static final RegistryObject<Item> CRYSTAL_ENDER = ITEMS.register("crystal_ender", () -> new ItemCrystal(new Item.Properties()));
     public static final RegistryObject<Item> CRYSTAL_RAW = ITEMS.register("crystal_raw", () -> new ItemCrystal(new Item.Properties()));
 
-    public static void register(IEventBus eventBus)
+     /**********************
+            METALLURGY
+     **********************/
+    //Crimson Steel
+    public static final RegistryObject<Item> CRIMSON_STEEL_RAW = ITEMS.register("crimson_steel_raw", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CRIMSON_STEEL_INGOT = ITEMS.register("crimson_steel_ingot", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CRIMSON_STEEL_NUGGET = ITEMS.register("crimson_steel_nugget", () -> new Item(new Item.Properties()));
+
+    public static void Register(IEventBus eventBus)
     {
         ITEMS.register(eventBus);
     }
