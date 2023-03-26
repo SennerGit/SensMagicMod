@@ -28,7 +28,7 @@ public class SensMagicMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.Register(modEventBus);
-        ModBlocks.Register(modEventBus);
+        ModBlockss.Register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -53,11 +53,18 @@ public class SensMagicMod
             event.accept(ModItems.CRIMSON_STEEL_NUGGET);
 
             //Blocks
-            event.accept(ModBlocks.BLOCK_CRYSTAL_ENDER);
-            event.accept(ModBlocks.CRIMSON_STEEL_ORE);
-            event.accept(ModBlocks.CRIMSON_STEEL_BLOCK);
-            event.accept(ModBlocks.CRIMSON_STEEL_DEEPSLATE_ORE);
-            event.accept(ModBlocks.RAW_CRIMSON_STEEL_BLOCK);
+            event.accept(ModBlockss.BLOCK_CRYSTAL_ENDER);
+            event.accept(ModBlockss.CRIMSON_STEEL_ORE);
+            event.accept(ModBlockss.CRIMSON_STEEL_BLOCK);
+            event.accept(ModBlockss.CRIMSON_STEEL_DEEPSLATE_ORE);
+            event.accept(ModBlockss.RAW_CRIMSON_STEEL_BLOCK);
+            event.accept(ModBlockss.GRAY_LEAF_LOG);
+            event.accept(ModBlockss.GRAY_LEAF_WOOD);
+            event.accept(ModBlockss.GRAY_LEAF_PLANKS);
+            event.accept(ModBlockss.STRIPPED_GRAY_LEAF_LOG);
+            event.accept(ModBlockss.STRIPPED_GRAY_LEAF_WOOD);
+            event.accept(ModBlockss.GRAY_LEAF_LEAVES);
+            event.accept(ModBlockss.GRAY_LEAF_SAPLING);
         }
     }
 

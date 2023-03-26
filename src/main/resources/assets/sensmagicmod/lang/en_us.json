@@ -11,5 +11,12 @@
   "block.sensmagicmod.crimson_steel_ore" : "Crimson Steel Ore",
   "block.sensmagicmod.crimson_steel_deepslate_ore" : "Deepslate Crimson Steel Ore",
   "block.sensmagicmod.crimson_steel_block" : "Crimson Steel Block",
-  "block.sensmagicmod.raw_crimson_steel_block" : "Raw Crimson Steel Block"
+  "block.sensmagicmod.raw_crimson_steel_block" : "Raw Crimson Steel Block",
+  "block.sensmagicmod.gray_leaf_log" : "Gray Leaf Log",
+  "block.sensmagicmod.gray_leaf_wood" : "Gray Leaf Wood",
+  "block.sensmagicmod.stripped_gray_leaf_log" : "Stripped Gray Leaf Log",
+  "block.sensmagicmod.stripped_gray_leaf_wood" : "Stripped Gray Leaf Wood",
+  "block.sensmagicmod.gray_leaf_planks" : "Gray Leaf Planks",
+  "block.sensmagicmod.gray_leaf_leaves" : "Gray Leaf Leaves",
+  "block.sensmagicmod.gray_leaf_sapling" : "Gray Leaf Sapling"
 }
