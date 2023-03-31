@@ -27,8 +27,8 @@ public class SensMagicMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItems.Register(modEventBus);
-        ModBlockss.Register(modEventBus);
+        ModItems.register(modEventBus);
+        ModBlockss.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -57,6 +57,8 @@ public class SensMagicMod
             event.accept(ModBlockss.CRIMSON_STEEL_ORE);
             event.accept(ModBlockss.CRIMSON_STEEL_BLOCK);
             event.accept(ModBlockss.CRIMSON_STEEL_DEEPSLATE_ORE);
+            event.accept(ModBlockss.CRIMSON_STEEL_NETHER_ORE);
+            event.accept(ModBlockss.CRIMSON_STEEL_END_ORE);
             event.accept(ModBlockss.RAW_CRIMSON_STEEL_BLOCK);
             event.accept(ModBlockss.GRAY_LEAF_LOG);
             event.accept(ModBlockss.GRAY_LEAF_WOOD);

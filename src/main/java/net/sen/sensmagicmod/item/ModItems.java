@@ -23,7 +23,7 @@ public class ModItems
     public static final RegistryObject<Item> CRIMSON_STEEL_INGOT = ITEMS.register("crimson_steel_ingot", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CRIMSON_STEEL_NUGGET = ITEMS.register("crimson_steel_nugget", () -> new Item(new Item.Properties()));
 
-    public static void Register(IEventBus eventBus)
+    public static void register(IEventBus eventBus)
     {
         ITEMS.register(eventBus);
     }
