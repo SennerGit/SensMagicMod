@@ -1,0 +1,9 @@
+{
+  "replace" : false,
+  "values": [
+    "sensmagicmod:gray_leaf_log",
+    "sensmagicmod:gray_leaf_wood",
+    "sensmagicmod:stripped_gray_leaf_log",
+    "sensmagicmod:stripped_gray_leaf_wood"
+  ]
+}
