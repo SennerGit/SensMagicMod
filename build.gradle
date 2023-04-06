@@ -125,6 +125,12 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
+
+    //Modonomicon
+    maven {
+        name = "KliKli Dev Repsy Maven"
+        url = "https://repo.repsy.io/mvn/klikli-dev/mods"
+    }
 }
 
 dependencies {
@@ -142,6 +148,11 @@ dependencies {
     // For more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+
+    //Modonomicon
+    compileOnly fg.deobf("com.klikli_dev:modonomicon:${modonomicon_mc_version}-${modonomicon_version}")
+    runtimeOnly fg.deobf("com.klikli_dev:modonomicon:${modonomicon_mc_version}-${modonomicon_version}")
+
 }
 
 // Example for how to get properties into the manifest for reading at runtime.

@@ -28,6 +28,8 @@ public class ModConfiguredFeatures
 {
     public static final ResourceKey<ConfiguredFeature<?, ?>> GRAY_LEAF_KEY = registerKey("gray_leaf");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BLOCK_CRYSTAL_ENDER_KEY = registerKey("block_crystal_ender");
+
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_CRIMSON_STEEL_KEY = registerKey("crimson_steel_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_CRIMSON_STEEL_KEY = registerKey("nether_crimson_steel_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_CRIMSON_STEEL_KEY = registerKey("end_crimson_steel_ore");
@@ -53,6 +55,8 @@ public class ModConfiguredFeatures
         register(context, OVERWORLD_CRIMSON_STEEL_KEY, Feature.ORE, new OreConfiguration(overworldCrimsonSteelOres, 9));
         register(context, NETHER_CRIMSON_STEEL_KEY, Feature.ORE, new OreConfiguration(netherReplaceables, ModBlockss.CRIMSON_STEEL_NETHER_ORE.get().defaultBlockState(), 9));
         register(context, END_CRIMSON_STEEL_KEY, Feature.ORE, new OreConfiguration(endReplaceables, ModBlockss.CRIMSON_STEEL_END_ORE.get().defaultBlockState(), 9));
+
+        register(context, BLOCK_CRYSTAL_ENDER_KEY, Feature.ORE, new OreConfiguration(endReplaceables, ModBlockss.BLOCK_CRYSTAL_ENDER.get().defaultBlockState(), 9));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name)

@@ -26,7 +26,7 @@ public class ModBlockLootTables extends BlockLootSubProvider
         add(ModBlockss.CRIMSON_STEEL_DEEPSLATE_ORE.get(), (block) -> createOreDrop(ModBlockss.CRIMSON_STEEL_DEEPSLATE_ORE.get(), ModItems.CRIMSON_STEEL_RAW.get()));
         add(ModBlockss.CRIMSON_STEEL_NETHER_ORE.get(), (block) -> createOreDrop(ModBlockss.CRIMSON_STEEL_ORE.get(), ModItems.CRIMSON_STEEL_RAW.get()));
         add(ModBlockss.CRIMSON_STEEL_END_ORE.get(), (block) -> createOreDrop(ModBlockss.CRIMSON_STEEL_ORE.get(), ModItems.CRIMSON_STEEL_RAW.get()));
-        add(ModBlockss.BLOCK_CRYSTAL_ENDER.get(), (block) -> createOreDrop(ModBlockss.BLOCK_CRYSTAL_ENDER.get(), ModItems.CRYSTAL_ENDER.get()));
+        add(ModBlockss.BLOCK_CRYSTAL_ENDER.get(), (block) -> createOreDrop(ModBlockss.BLOCK_CRYSTAL_ENDER.get(), ModItems.CRYSTAL_ENDER_SMALL.get()));
 
         this.dropSelf(ModBlockss.GRAY_LEAF_LOG.get());
         this.dropSelf(ModBlockss.GRAY_LEAF_WOOD.get());

@@ -6,14 +6,19 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sen.sensmagicmod.SensMagicMod;
+import net.sen.sensmagicmod.config.ConfigSensMagicMod;
+import net.sen.sensmagicmod.magic.ModMagicElements;
 
 public class ModItems
 {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SensMagicMod.MODID);
 
-    //Magic Crystal
-    public static final RegistryObject<Item> CRYSTAL_ENDER = ITEMS.register("crystal_ender", () -> new ItemCrystal(new Item.Properties()));
-    public static final RegistryObject<Item> CRYSTAL_RAW = ITEMS.register("crystal_raw", () -> new ItemCrystal(new Item.Properties()));
+    /**********************
+     MAGIC CRYSTALS
+     **********************/
+    //Small Magic Crystals
+    public static final RegistryObject<ItemCrystal> CRYSTAL_RAW_SMALL = ITEMS.register("crystal_raw_small", () -> new ItemCrystal(new Item.Properties(), ConfigSensMagicMod.get().small_magic_capacity, ModMagicElements.RAW));
+    public static final RegistryObject<ItemCrystal> CRYSTAL_ENDER_SMALL = ITEMS.register("crystal_ender_small", () -> new ItemCrystal(new Item.Properties(), ConfigSensMagicMod.get().small_magic_capacity, ModMagicElements.ENDER));
 
      /**********************
             METALLURGY

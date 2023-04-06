@@ -18,7 +18,7 @@ public class ModCreativeModeTabs
     public static void  registerCreativeModeTabs(CreativeModeTabEvent.Register event)
     {
         SENS_MAGIC_TAB = event.registerCreativeModeTab(new ResourceLocation(SensMagicMod.MODID, "sens_magic_tab"), builder -> builder
-                .icon(() -> new ItemStack(ModItems.CRYSTAL_RAW.get()))
+                .icon(() -> new ItemStack(ModItems.CRYSTAL_RAW_SMALL.get()))
                 .title(Component.translatable("creativemodetab.sens_magic_tab"))
         );
     }

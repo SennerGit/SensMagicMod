@@ -10,6 +10,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import net.sen.sensmagicmod.SensMagicMod;
 import net.sen.sensmagicmod.block.ModBlockss;
+import net.sen.sensmagicmod.item.ItemCrystal;
 import net.sen.sensmagicmod.item.ModItems;
 
 public class ModItemModelProvider extends ItemModelProvider
@@ -26,8 +27,8 @@ public class ModItemModelProvider extends ItemModelProvider
         simpleItem(ModItems.CRIMSON_STEEL_INGOT);
         simpleItem(ModItems.CRIMSON_STEEL_RAW);
         simpleItem(ModItems.CRIMSON_STEEL_NUGGET);
-        simpleItem(ModItems.CRYSTAL_ENDER);
-        simpleItem(ModItems.CRYSTAL_RAW);
+        simpleItemCrystal(ModItems.CRYSTAL_ENDER_SMALL);
+        simpleItemCrystal(ModItems.CRYSTAL_RAW_SMALL);
         saplingItem(ModBlockss.GRAY_LEAF_SAPLING);
     }
 
@@ -38,6 +39,13 @@ public class ModItemModelProvider extends ItemModelProvider
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item)
+    {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(SensMagicMod.MODID, "item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder simpleItemCrystal(RegistryObject<ItemCrystal> item)
     {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",

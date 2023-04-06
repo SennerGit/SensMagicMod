@@ -22,6 +22,8 @@ public class ModPlaceFeatures
 {
     public static ResourceKey<PlacedFeature> GRAY_LEAF_PLACED_KEY = createKey("gray_leaf_placed");
 
+    public static ResourceKey<PlacedFeature> BLOCK_CRYSTAL_ENDER_PLACED_KEY = createKey("block_crystal_ender_placed");
+
     public static ResourceKey<PlacedFeature> CRIMSON_STEEL_PLACED_KEY = createKey("crimson_steel_placed");
     public static ResourceKey<PlacedFeature> NETHER_CRIMSON_STEEL_PLACED_KEY = createKey("nether_crimson_steel_placed");
     public static ResourceKey<PlacedFeature> END_CRIMSON_STEEL_PLACED_KEY = createKey("end_crimson_steel_placed");
@@ -42,6 +44,10 @@ public class ModPlaceFeatures
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
 
         register(context, END_CRIMSON_STEEL_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_CRIMSON_STEEL_KEY),
+                ModOrePlacement.commonOrePlacement(9,
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
+
+        register(context, BLOCK_CRYSTAL_ENDER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLOCK_CRYSTAL_ENDER_KEY),
                 ModOrePlacement.commonOrePlacement(9,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
     }
