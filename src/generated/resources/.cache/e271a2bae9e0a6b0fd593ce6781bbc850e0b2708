@@ -1,0 +1,5 @@
+// 1.19.4	2023-04-07T12:30:41.0902353	Tags for minecraft:block mod id sensmagicmod
+9bc868dd1e9bf8ed3a3e54533faf4287ab765dad data/sensmagicmod/tags/blocks/logs.json
+cb45d0fdde4b495aee68dea33e39e8c4594a0e60 data/sensmagicmod/tags/blocks/mineable/pickaxe.json
+bd0390e34192cda01280918eff13dd1b59224f93 data/sensmagicmod/tags/blocks/needs_diamond_tool.json
+5399462f3a3da633126271dd8687f41aca4b6774 data/sensmagicmod/tags/blocks/needs_iron_tool.json

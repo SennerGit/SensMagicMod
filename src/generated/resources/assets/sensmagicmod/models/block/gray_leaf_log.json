@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "sensmagicmod:block/gray_leaf_log_top",
+    "side": "sensmagicmod:block/gray_leaf_log"
+  }
+}

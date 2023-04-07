@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "crimson_steel_ingot",
+  "ingredient": {
+    "item": "sensmagicmod:crimson_steel_deepslate_ore"
+  },
+  "result": "sensmagicmod:crimson_steel_ingot"
+}

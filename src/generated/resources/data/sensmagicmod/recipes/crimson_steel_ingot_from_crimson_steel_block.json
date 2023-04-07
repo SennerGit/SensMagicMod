@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "crimson_steel_ingot",
+  "ingredients": [
+    {
+      "item": "sensmagicmod:crimson_steel_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "sensmagicmod:crimson_steel_ingot"
+  }
+}

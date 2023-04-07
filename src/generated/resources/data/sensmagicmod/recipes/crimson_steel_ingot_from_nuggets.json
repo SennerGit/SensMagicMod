@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "crimson_steel_ingot",
+  "key": {
+    "#": {
+      "item": "sensmagicmod:crimson_steel_nugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "sensmagicmod:crimson_steel_ingot"
+  },
+  "show_notification": true
+}
