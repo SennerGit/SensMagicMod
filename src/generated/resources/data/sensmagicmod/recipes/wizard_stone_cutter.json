@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "P": {
+      "tag": "minecraft:pickaxes"
+    }
+  },
+  "pattern": [
+    "P P",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "sensmagicmod:wizard_stone_cutter"
+  },
+  "show_notification": true
+}

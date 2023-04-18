@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "sensmagicmod:crimson_steel_ingot"
+    },
+    "C": {
+      "item": "minecraft:cauldron"
+    }
+  },
+  "pattern": [
+    "# #",
+    "#C#",
+    "###"
+  ],
+  "result": {
+    "item": "sensmagicmod:wizard_cauldron"
+  },
+  "show_notification": true
+}

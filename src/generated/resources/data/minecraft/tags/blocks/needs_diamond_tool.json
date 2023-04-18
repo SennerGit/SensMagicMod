@@ -1,0 +1,13 @@
+{
+  "values": [
+    "sensmagicmod:block_crystal_ender",
+    "sensmagicmod:orichalcum_block",
+    "#sensmagicmod:orichalcum_ores",
+    "sensmagicmod:raw_orichalcum_block",
+    "sensmagicmod:mythril_block",
+    "#sensmagicmod:mythril_ores",
+    "sensmagicmod:raw_mythril_block",
+    "sensmagicmod:blood_stone_block",
+    "#sensmagicmod:blood_stone_ores"
+  ]
+}

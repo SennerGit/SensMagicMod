@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "sensmagicmod:block/gray_leaf_planks",
+    "side": "sensmagicmod:block/gray_leaf_planks",
+    "top": "sensmagicmod:block/gray_leaf_planks"
+  }
+}

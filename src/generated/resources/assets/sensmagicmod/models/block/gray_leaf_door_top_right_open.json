@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right_open",
+  "textures": {
+    "bottom": "sensmagicmod:block/gray_leaf_planks",
+    "top": "sensmagicmod:block/gray_leaf_planks"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "minecraft:planks"
+    },
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    }
+  },
+  "pattern": [
+    " FP",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "sensmagicmod:wizard_writing_station"
+  },
+  "show_notification": true
+}

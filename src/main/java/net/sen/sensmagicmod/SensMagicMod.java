@@ -1,8 +1,10 @@
 package net.sen.sensmagicmod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -12,11 +14,14 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.sen.sensmagicmod.config.ConfigSensMagicMod;
-import net.sen.sensmagicmod.networking.ModMessages;
+import net.sen.sensmagicmod.client.entity.renderer.StraphinRenderer;
+import net.sen.sensmagicmod.common.config.ConfigSensMagicMod;
+import net.sen.sensmagicmod.common.entity.ModEntities;
+import net.sen.sensmagicmod.common.networking.ModMessages;
+import net.sen.sensmagicmod.common.villager.ModVillagers;
 import org.slf4j.Logger;
-import net.sen.sensmagicmod.item.*;
-import net.sen.sensmagicmod.block.*;
+import net.sen.sensmagicmod.common.item.*;
+import net.sen.sensmagicmod.common.block.*;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(SensMagicMod.MODID)
@@ -33,6 +38,9 @@ public class SensMagicMod
 
         ModItems.register(modEventBus);
         ModBlockss.register(modEventBus);
+        ModEntities.register(modEventBus);
+
+        ModVillagers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -47,36 +55,13 @@ public class SensMagicMod
         event.enqueueWork(() ->
         {
             ModMessages.register();
+            ModVillagers.registerPOIs();
         });
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event)
     {
-        if (event.getTab() == ModCreativeModeTabs.SENS_MAGIC_TAB)
-        {
-            //Items
-            event.accept(ModItems.CRYSTAL_ENDER_SMALL);
-            event.accept(ModItems.CRYSTAL_RAW_SMALL);
-            event.accept(ModItems.CRIMSON_STEEL_RAW);
-            event.accept(ModItems.CRIMSON_STEEL_INGOT);
-            event.accept(ModItems.CRIMSON_STEEL_NUGGET);
-
-            //Blocks
-            event.accept(ModBlockss.BLOCK_CRYSTAL_ENDER);
-            event.accept(ModBlockss.CRIMSON_STEEL_ORE);
-            event.accept(ModBlockss.CRIMSON_STEEL_BLOCK);
-            event.accept(ModBlockss.CRIMSON_STEEL_DEEPSLATE_ORE);
-            event.accept(ModBlockss.CRIMSON_STEEL_NETHER_ORE);
-            event.accept(ModBlockss.CRIMSON_STEEL_END_ORE);
-            event.accept(ModBlockss.RAW_CRIMSON_STEEL_BLOCK);
-            event.accept(ModBlockss.GRAY_LEAF_LOG);
-            event.accept(ModBlockss.GRAY_LEAF_WOOD);
-            event.accept(ModBlockss.GRAY_LEAF_PLANKS);
-            event.accept(ModBlockss.STRIPPED_GRAY_LEAF_LOG);
-            event.accept(ModBlockss.STRIPPED_GRAY_LEAF_WOOD);
-            event.accept(ModBlockss.GRAY_LEAF_LEAVES);
-            event.accept(ModBlockss.GRAY_LEAF_SAPLING);
-        }
+        ModCreativeModeTabs.register(event);
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -86,6 +71,8 @@ public class SensMagicMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            EntityRenderers.register(ModEntities.STRAPHIN.get(), StraphinRenderer::new);
+
             ItemProperties.register(ModItems.CRYSTAL_RAW_SMALL.get(), new ResourceLocation(SensMagicMod.MODID, ""), (stack, level, entity, i) -> {
                 return ItemCrystal.getCurrentMagicCapacity() / (ItemCrystal.getMaxMagicCapacity(stack)*1.0f);
             });

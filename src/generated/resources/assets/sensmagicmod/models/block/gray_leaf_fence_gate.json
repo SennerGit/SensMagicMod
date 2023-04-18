@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fence_gate",
+  "textures": {
+    "texture": "sensmagicmod:block/gray_leaf_planks"
+  }
+}

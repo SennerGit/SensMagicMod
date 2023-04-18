@@ -1,14 +1,30 @@
+buildscript {
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net/' }
+        maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
+        classpath 'org.spongepowered:mixingradle:0.7.+'
+    }
+}
+
 plugins {
     id 'eclipse'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
-compileJava.options.encoding = 'UTF-8'
 
 version = "${mod_version}-${minecraft_version}"
 group = package_custom // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = modid_custom
+
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.spongepowered.mixin'
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -28,9 +44,10 @@ minecraft {
     //
     // Use non-default mappings at your own risk. They may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
-    mappings channel: "${mappings_channel}", version: "${mapping_version}"
+    //mappings channel: mappings_channel, version: mapping_version
+    mappings channel: 'parchment', version: '2023.03.12-1.19.3'
 
-    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
+    //accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
 
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.
@@ -53,6 +70,8 @@ minecraft {
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             property 'forge.enabledGameTestNamespaces', "${modid_custom}"
 
+            property '--mixin', "mixins.${modid_custom}.json"
+
             mods {
                 modid_custom {
                     source sourceSets.main
@@ -68,6 +87,8 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             property 'forge.enabledGameTestNamespaces', modid_custom
+
+            property '--mixin', "mixins.${modid_custom}.json"
 
             mods {
                 modid_custom {
@@ -87,6 +108,8 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             property 'forge.enabledGameTestNamespaces', modid_custom
+
+            property '--mixin', "mixins.${modid_custom}.json"
 
             mods {
                 modid_custom {
@@ -126,6 +149,29 @@ repositories {
     //     dir 'libs'
     // }
 
+    //Mixin
+    maven { url = 'https://files.minecraftforge.net/maven' }
+
+    jcenter()
+
+    mavenCentral()
+
+    maven {
+
+        name = 'sponge'
+
+        url = 'https://repo.spongepowered.org/maven'
+
+    }
+
+    //Curse Maven
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+
     //Modonomicon
     maven {
         name = "KliKli Dev Repsy Maven"
@@ -134,6 +180,27 @@ repositories {
 
     //Geckolib 4.x
     maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+
+    //Jei
+    maven {
+        // location of the maven that hosts JEI files
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+
+    maven {
+        name = "Jared's maven"
+        url = "https://maven.blamejared.com/"
+    }
+
+    maven {
+        // location of a maven mirror for JEI files, as a fallback
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
+
+    //JitPack
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -141,6 +208,7 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft "net.minecraftforge:forge:${forge_mc_version}-${forge_version}"
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // implementation fg.deobf("com.tterrag.registrate:Registrate:MC${mc_version}-${registrate_version}") // Adds registrate as a dependency
@@ -158,6 +226,32 @@ dependencies {
 
     //Geckolib 4.x
     implementation fg.deobf("software.bernie.geckolib:geckolib-forge-${geckolib_mc_version}:${geckolib_version}")
+
+    //Jei
+    // compile against the JEI API but do not include it at runtime
+    compileOnly(fg.deobf("mezz.jei:jei-${jei_mc_version}-common-api:${jei_version}"))
+    compileOnly(fg.deobf("mezz.jei:jei-${jei_mc_version}-forge-api:${jei_version}"))
+    // at runtime, use the full JEI jar for Forge
+    runtimeOnly(fg.deobf("mezz.jei:jei-${jei_mc_version}-forge:${jei_version}"))
+
+    //JitPack
+    //implementation 'com.github.User:Repo:Tag'
+
+    //Mixin Extras
+    implementation("com.github.LlamaLad7:MixinExtras:0.1.1")
+    annotationProcessor("com.github.LlamaLad7:MixinExtras:0.1.1")
+}
+
+mixin {
+    //add sourceSets.main, "mixins.sensmagicmod.refmap.json"
+    //add sourceSets.main, 'mixins.sensmagicmod.client.refmap.json'
+    config 'mixins.sensmagicmod.json'
+    //config 'mixins.sensmagicmod.client.json'
+    //config 'mixins.sensmagicmod.api.json'
+
+    //optional for debug purposes but i have them included:
+    debug.verbose = true
+    debug.export = true
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
@@ -170,7 +264,10 @@ jar {
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "${modid_custom}sareus",
-                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                'TweakClass': 'org.spongepowered.asm.launch.MixinTweaker',
+                "MixinConfigs" : "mixins.yourmodid.json",
+                'FMLCorePluginContainsFMLMod': 'true',
         ])
     }
 }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "minecraft:stone_bricks"
+    },
+    "C": {
+      "tag": "minecraft:wool_carpets"
+    }
+  },
+  "pattern": [
+    " C ",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "sensmagicmod:wizard_ritual_stone"
+  },
+  "show_notification": true
+}

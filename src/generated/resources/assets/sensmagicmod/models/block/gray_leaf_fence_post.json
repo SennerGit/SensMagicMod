@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "sensmagicmod:block/gray_leaf_planks"
+  }
+}

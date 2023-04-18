@@ -1,5 +1,19 @@
-// 1.19.4	2023-04-07T12:30:41.0902353	Tags for minecraft:block mod id sensmagicmod
-9bc868dd1e9bf8ed3a3e54533faf4287ab765dad data/sensmagicmod/tags/blocks/logs.json
-cb45d0fdde4b495aee68dea33e39e8c4594a0e60 data/sensmagicmod/tags/blocks/mineable/pickaxe.json
-bd0390e34192cda01280918eff13dd1b59224f93 data/sensmagicmod/tags/blocks/needs_diamond_tool.json
-5399462f3a3da633126271dd8687f41aca4b6774 data/sensmagicmod/tags/blocks/needs_iron_tool.json
+// 1.19.4	2023-04-16T09:13:00.9118114	Tags for minecraft:block mod id sensmagicmod
+0ecd8a613200d4860b9fd366804bf92a034cb586 data/minecraft/tags/blocks/leaves.json
+313bd1939274f1bae27912a6619745d1f28109db data/minecraft/tags/blocks/logs_that_burn.json
+296995d03c73950864c540366c0bb7178d4a74d3 data/minecraft/tags/blocks/mineable/axe.json
+0136c8b81fa03ce2c2b1f98211912288d08fb420 data/minecraft/tags/blocks/mineable/pickaxe.json
+ee4ee76d1b8936413bafce3d941527c43c5ef0db data/minecraft/tags/blocks/needs_diamond_tool.json
+6b99134a9bff1a51869a684e07ef634dceaac409 data/minecraft/tags/blocks/needs_iron_tool.json
+c2e930c707815d748e2db6506089cafee3e57b2e data/minecraft/tags/blocks/needs_stone_tool.json
+c31bdef58ece1894495cc4074fc23acd233080fa data/minecraft/tags/blocks/overworld_natural_logs.json
+43327e01df760ebd295b59671fb5564527d5dac5 data/minecraft/tags/blocks/planks.json
+1466109d76913dbb8865798e47ee3d12af43cc3d data/minecraft/tags/blocks/saplings.json
+b91245c4873344dadee64833c60dcf9f7ca67d2f data/sensmagicmod/tags/blocks/blood_stone_ores.json
+f6db8c07e7728b08021627c32875ec3d080c9a22 data/sensmagicmod/tags/blocks/crimson_steel_ores.json
+9bc868dd1e9bf8ed3a3e54533faf4287ab765dad data/sensmagicmod/tags/blocks/gray_leaf_log.json
+19c672d7985de5629446ca5fd9eff8cec020ad73 data/sensmagicmod/tags/blocks/mythril_ores.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/sensmagicmod/tags/blocks/needs_crimson_steel_tool.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/sensmagicmod/tags/blocks/needs_mythril_tool.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/sensmagicmod/tags/blocks/needs_orichalcum_tool.json
+3af6d4d5e9aff153ec472dfdb5a6146a277a9464 data/sensmagicmod/tags/blocks/orichalcum_ores.json

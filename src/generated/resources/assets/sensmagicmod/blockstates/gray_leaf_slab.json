@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "sensmagicmod:block/gray_leaf_slab"
+    },
+    "type=double": {
+      "model": "sensmagicmod:block/gray_leaf_planks"
+    },
+    "type=top": {
+      "model": "sensmagicmod:block/gray_leaf_slab_top"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "minecraft:planks"
+    },
+    "H": {
+      "tag": "minecraft:hoes"
+    }
+  },
+  "pattern": [
+    "H H",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "sensmagicmod:wizard_agriculture_station"
+  },
+  "show_notification": true
+}

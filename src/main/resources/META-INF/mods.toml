@@ -74,6 +74,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis lacinia magn
     versionRange="[1.19.4-1.30.2,)"
     ordering="NONE"
     side="BOTH"
+# Modonomicon.
+[[dependencies.sensmagicmod]]
+    modId="jei"
+    mandatory=false
+    versionRange="[1.19.4-13.1.0.2,)"
+    ordering="NONE"
+    side="CLIENT"
 # Here's another dependency
 [[dependencies.sensmagicmod]]
     modId="minecraft"

@@ -19,9 +19,10 @@
   "category_button_y_offset": 0,
   "crafting_texture": "modonomicon:textures/gui/crafting_textures.png",
   "creative_tab": "modonomicon:modonomicon",
+  "custom_book_item": "sensmagicmod:sens_magic_mod_book",
   "default_title_color": 0,
   "frame_texture": "modonomicon:textures/gui/book_frame.png",
-  "generate_book_item": true,
+  "generate_book_item": false,
   "left_frame_overlay": {
     "frame_height": 70,
     "frame_width": 7,
@@ -31,7 +32,7 @@
     "texture_height": 256,
     "texture_width": 256
   },
-  "model": "modonomicon:modonomicon_red",
+  "model": "sensmagicmod:sens_magic_mod_book_icon",
   "name": "book.sensmagicmod.sens_magic_mod_book.name",
   "read_all_button_y_offset": 0,
   "right_frame_overlay": {

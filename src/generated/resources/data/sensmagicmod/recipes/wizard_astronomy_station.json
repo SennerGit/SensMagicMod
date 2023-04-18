@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    "##G",
+    " # ",
+    "# #"
+  ],
+  "result": {
+    "item": "sensmagicmod:wizard_astronomy_station"
+  },
+  "show_notification": true
+}

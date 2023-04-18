@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "orichalcum_ingot",
+  "key": {
+    "#": {
+      "item": "sensmagicmod:orichalcum_nugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "sensmagicmod:orichalcum_ingot"
+  },
+  "show_notification": true
+}

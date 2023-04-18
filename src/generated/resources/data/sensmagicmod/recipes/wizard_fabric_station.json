@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "minecraft:planks"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "sensmagicmod:wizard_fabric_station"
+  },
+  "show_notification": true
+}

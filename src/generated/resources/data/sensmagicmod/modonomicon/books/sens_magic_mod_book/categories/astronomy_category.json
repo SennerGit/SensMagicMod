@@ -1,0 +1,11 @@
+{
+  "background": "modonomicon:textures/gui/dark_slate_seamless.png",
+  "background_height": 512,
+  "background_parallax_layers": [],
+  "background_width": 512,
+  "entry_textures": "modonomicon:textures/gui/entry_textures.png",
+  "icon": "sensmagicmod:wizard_astronomy_station",
+  "name": "book.sensmagicmod.sens_magic_mod_book.astronomy_category.name",
+  "show_category_button": true,
+  "sort_number": 9
+}

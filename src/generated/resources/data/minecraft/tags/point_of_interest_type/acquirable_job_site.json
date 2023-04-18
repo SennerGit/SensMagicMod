@@ -1,0 +1,26 @@
+{
+  "values": [
+    "minecraft:armorer",
+    "minecraft:butcher",
+    "minecraft:cartographer",
+    "minecraft:cleric",
+    "minecraft:farmer",
+    "minecraft:fisherman",
+    "minecraft:fletcher",
+    "minecraft:leatherworker",
+    "minecraft:librarian",
+    "minecraft:mason",
+    "minecraft:shepherd",
+    "minecraft:toolsmith",
+    "minecraft:weaponsmith",
+    "sensmagicmod:wizard_cauldron_block_poi",
+    "sensmagicmod:wizard_alchemy_station_block_poi",
+    "sensmagicmod:wizard_writing_station_block_poi",
+    "sensmagicmod:wizard_ritual_stone_block_poi",
+    "sensmagicmod:wizard_stone_cutter_block_poi",
+    "sensmagicmod:wizard_fabric_station_block_poi",
+    "sensmagicmod:wizard_forge_block_poi",
+    "sensmagicmod:wizard_astronomy_station_block_poi",
+    "sensmagicmod:wizard_agriculture_station_block_poi"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "net.sen.sensmagicmod.Mixin",
+  "compatibilityLevel": "JAVA_17",
+  "plugin": "net.sen.sensmagicmod.Mixin.plugin.MixinPlugin",
+  "mixins": [
+    "STPAccessor"
+  ],
+  "server": [
+
+    ],
+  "minVersion": "0.8",
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
